@@ -11,3 +11,11 @@ basketHeading.style.color='green'
 
 const thanks=document.getElementById('thanks')
 thanks.innerHTML='<P>Please visit us again</P>'
+
+const fruitElements = document.getElementsByClassName('fruit');
+
+for (let i = 0; i < fruitElements.length; i++) {
+    fruitElements[i].style.fontWeight = 'bold';
+}
+
+fruitElements[2].style.backgroundColor='yellow'
