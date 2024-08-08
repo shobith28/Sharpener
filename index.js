@@ -1,28 +1,37 @@
-const mainHeading=document.getElementById('main-heading');
-mainHeading.textContent='Fruit World'
-mainHeading.style.color='orange'
+// Write the code as shown in the video below:
 
-const header=document.getElementById('header');
-header.style.backgroundColor='green'
-header.style.borderBottom='5px solid orange'
+const mainHeading=document.querySelector('#main-heading')
+mainHeading.style.textAlign='right'
 
-const basketHeading=document.getElementById('basket-heading')
-basketHeading.style.color='green'
+const fruits=document.querySelector('.fruits');
+fruits.style.backgroundColor='grey'
+fruits.style.padding='30px'
+fruits.style.margin='30px'
+fruits.style.width='70%'
+fruits.style.borderRadius='5px'
+fruits.style.listStyleType='none';
 
-const thanks=document.getElementById('thanks')
-thanks.innerHTML='<P>Please visit us again</P>'
-
-const fruitElements = document.getElementsByClassName('fruit');
-
-for (let i = 0; i < fruitElements.length; i++) {
-    fruitElements[i].style.fontWeight = 'bold';
+const fruit=document.querySelectorAll('.fruit')
+for(let i=0;i<fruit.length;i++){
+  fruit[i].style.padding='10px'
+  fruit[i].style.margin='10px'
+  fruit[i].style.borderRadius='5px'
+  fruit[i].style.backgroundColor='white'
 }
+// Write answer to the questions asked below:
 
-fruitElements[2].style.backgroundColor='yellow'
+const basketHeading=document.querySelector('#basket-heading')
+basketHeading.style.color='brown';
 
-const li=document.getElementsByTagName('li');
-li[4].style.color='blue';
+// const evenFruit=document.querySelectorAll('.fruit:nth-child(even)')
+// for(let i=0;i<evenFruit.length;i++){
+//   evenFruit[i].style.backgroundColor='brown'
+//   evenFruit[i].style.color='White'
+// }
 
-for(let i=0;i<li.length;i++){
-  li[i].style.fontStyle='italic';
-}
+
+const fruitElements = document.getElementsByClassName('fruit')
+fruitElements[1].style.backgroundColor='brown'
+fruitElements[1].style.color='white'
+fruitElements[3].style.backgroundColor='brown'
+fruitElements[3].style.color='white'
