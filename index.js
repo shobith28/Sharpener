@@ -1,37 +1,19 @@
-// Write the code as shown in the video below:
+// Write your code below:
+const h3=document.createElement('h3')
+const p=document.createElement('p')
 
-const mainHeading=document.querySelector('#main-heading')
-mainHeading.style.textAlign='right'
+const h3Text=document.createTextNode('Buy high quality organic fruits online')
+const pText=document.createTextNode('Total fruits: 4')
 
-const fruits=document.querySelector('.fruits');
-fruits.style.backgroundColor='grey'
-fruits.style.padding='30px'
-fruits.style.margin='30px'
-fruits.style.width='70%'
-fruits.style.borderRadius='5px'
-fruits.style.listStyleType='none';
+h3.appendChild(h3Text)
+p.appendChild(pText)
 
-const fruit=document.querySelectorAll('.fruit')
-for(let i=0;i<fruit.length;i++){
-  fruit[i].style.padding='10px'
-  fruit[i].style.margin='10px'
-  fruit[i].style.borderRadius='5px'
-  fruit[i].style.backgroundColor='white'
-}
-// Write answer to the questions asked below:
+const div=document.getElementsByTagName('div')
+div[0].appendChild(h3)
 
-const basketHeading=document.querySelector('#basket-heading')
-basketHeading.style.color='brown';
+const fruit=document.querySelector('.fruits')
+div[1].insertBefore(p,fruit)
 
-// const evenFruit=document.querySelectorAll('.fruit:nth-child(even)')
-// for(let i=0;i<evenFruit.length;i++){
-//   evenFruit[i].style.backgroundColor='brown'
-//   evenFruit[i].style.color='White'
-// }
-
-
-const fruitElements = document.getElementsByClassName('fruit')
-fruitElements[1].style.backgroundColor='brown'
-fruitElements[1].style.color='white'
-fruitElements[3].style.backgroundColor='brown'
-fruitElements[3].style.color='white'
+p.id='fruits-total'
+h3.style.fontStyle='italic'
+// console.log(p)
