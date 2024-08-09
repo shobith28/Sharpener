@@ -1,19 +1,30 @@
-// Write your code below:
-const h3=document.createElement('h3')
-const p=document.createElement('p')
 
-const h3Text=document.createTextNode('Buy high quality organic fruits online')
-const pText=document.createTextNode('Total fruits: 4')
+// Add the Edit Button:
+document.querySelectorAll('.fruit').forEach(li => {
+  const editBtn = document.createElement('button');
+  editBtn.className = 'edit-btn';
+  editBtn.textContent = 'Edit';
+  li.appendChild(editBtn);
+});
 
-h3.appendChild(h3Text)
-p.appendChild(pText)
+// Implement the code as in video but with one extra 'Edit' button in 'li'
+const form=document.querySelector('form');
+const fruit=document.querySelector('.fruits');
 
-const div=document.getElementsByTagName('div')
-div[0].appendChild(h3)
+form.addEventListener('submit',function(event){
+event.preventDefault();
+const fruitToAdd=document.getElementById('fruit-to-add');
 
-const fruit=document.querySelector('.fruits')
-div[1].insertBefore(p,fruit)
+const newLi=document.createElement('li');
+newLi.innerHTML=fruitToAdd.value + '<button class="delete-btn">x</button><button class="edit-btn">Edit</button>'
 
-p.id='fruits-total'
-h3.style.fontStyle='italic'
-// console.log(p)
+fruit.appendChild(newLi)
+// console.log(newLi)
+})
+
+fruit.addEventListener('click',function(event){
+if(event.target.classList.contains('delete-btn')){
+  const fruitDelete=event.target.parentElement;
+  fruit.removeChild(fruitDelete)
+}
+})
