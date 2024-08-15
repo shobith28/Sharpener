@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-</head>
-
-<body style="margin: 0">
-  <!-- Write your code below -->
-  <form id='user-form'>
-    <label for='username'>UserName:</label>
-    <input type='text' name='username' id='username' >
-    <label for='email'>Email:</label>
-    <input type='email' name='email' id='email'>
-    <label for='phone'>Phone Number:</label>
-    <input type='tel' name='phone' id='phone'>
-    <button type='submit' id='sub'>Submit</button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="margin: 0">
+    <form onsubmit="handleFormSubmit(event)">
+      <label for="amount">Expense Amount: </label>
+      <input type="text" name="amount" id="amount" />
+      <label for="description">Expense Description: </label>
+      <input type="text" name="description" id="description" />
+      <label for="type">Choose a Category: </label>
+      <select id="type">
+        <option value="" selected disabled>Choose</option>
+        <option value="movie">Movie</option>
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+      </select> 
+      <button type="submit">Add Expense</button>
+    </form>
+    <ul id="user-list"></ul>
+  </body>
   <script src="index.js"></script>
-</body>
-
-
 </html>
