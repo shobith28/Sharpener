@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body style="margin: 0">
-    <form onsubmit="handleFormSubmit(event)">
-      <label for="amount">Expense Amount: </label>
-      <input type="text" name="amount" id="amount" />
-      <label for="description">Expense Description: </label>
-      <input type="text" name="description" id="description" />
-      <label for="type">Choose a Category: </label>
-      <select id="type">
-        <option value="" selected disabled>Choose</option>
-        <option value="movie">Movie</option>
-        <option value="food">Food</option>
-        <option value="travel">Travel</option>
-      </select> 
-      <button type="submit">Add Expense</button>
-    </form>
-    <ul id="user-list"></ul>
-  </body>
-  <script src="index.js"></script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body style="margin: 0">
+  <form onsubmit="handleFormSubmit(event)">
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" />
+    <label for="price">Price: </label>
+    <input type="number" name="price" id="price" />
+    <label for="quantity">Quantity</label>
+    <input type="number" name="quantity" id="quantity" />
+    <button type="submit">Submit</button>
+  </form>
+  <ul></ul>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+<script src="index.js"></script>
+
 </html>
